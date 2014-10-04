@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Ejercicio</title>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+<script src="http://code.jquery.com/color/jquery.color-2.1.2.min.js"></script>
+
+	<style type="text/css" media="screen">
+	
+	
+	
+	
+	.cuadro{
+		float:left;
+		width:50px;
+		height:50px;
+		margin:5px;
+		
+		
+		
+		}
+	
+		
+		
+		/*.crece{
+			
+			background:yellow;
+			font-size:70px;
+			
+			}
+	*/
+	</style>
+
+
+	<script type="text/javascript" charset="utf-8">
+	
+	
+	
+			
+			var colores=["#39BFA7", "#1BA1BF", "#03588C", "#6232A6", "#D9297B", "#A60039", "#FF004E", "#1BE7DC", "#39C0BA", "#2CA396","#0C6EFF", "#E8E40B", "#FF0173", "#24E8D9", "#FFBC0C", "#FFFDB0", "#29FEBB", "#8551FE", "#FF1C7A", "#0E0B1E"];
+			
+			function myFunction(){
+				    
+		    
+				
+				numerousuario = document.getElementById("numero").value;
+				for(i =1; i <= numerousuario; i++){
+					
+					aleatorio=Math.floor(Math.random() * colores.length);
+					
+					jQuery("#demo").append('<div class="cuadro" style="background:' + colores[aleatorio] + '"></div>')
+				
+				}
+				
+				$(".cuadro").mouseenter(function (){
+				     	$(this).animate({
+							width:"70px",
+							height:"70px",
+							},100)
+						});
+				
+						$(".cuadro").mouseleave(function (){
+				     	$(this).animate({
+							width:"50px",
+							height:"50px",
+							},100)
+						});
+				
+				
+				
+			};
+
+
+	
+				
+
+			</script>
+
+
+
+
+</head>
+
+<body>
+
+
+
+ <input type="text" name="numero" placeholder="Escribe un número" id="numero" >
+<button onClick="myFunction()"> ENTER </button>
+ 
+ <div id="demo"></div>
+ 
+ <!--<div class="clear"></div>
+ <div id="cuadritos" class="cuadro"></div>
+  <div class="clear"></div>-->
+ 
+</body>
+</html>
+
